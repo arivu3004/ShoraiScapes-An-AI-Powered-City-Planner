@@ -32,7 +32,7 @@ source venv/bin/activate
 
 # Install requirements
 echo "Installing dependencies..."
-pip install -r requirements.txt
+pip install -r ../requirements.txt
 
 # Run the Flask app
 echo ""
