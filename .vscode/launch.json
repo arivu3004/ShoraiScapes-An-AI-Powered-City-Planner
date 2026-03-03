@@ -2,17 +2,20 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Run Project1 in Edge",
-      "type": "debugpy",
+      "name": "Run Project1 (Flask)",
+      "type": "python",
       "request": "launch",
       "program": "${workspaceFolder}/backend/app.py",
-      "cwd": "${workspaceFolder}/backend",
-      "console": "internalConsole",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
       "justMyCode": true,
+      "env": {
+        "PYTHONUNBUFFERED": "1"
+      },
       "serverReadyAction": {
         "action": "debugWithEdge",
-        "pattern": "Running on (https?://\\S+)",
-        "uriFormat": "http://127.0.0.1:5000"
+        "pattern": "Running on (https?://127\\.0\\.0\\.1:5000|https?://localhost:5000)",
+        "uriFormat": "%s"
       }
     }
   ]
