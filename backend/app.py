@@ -1,8 +1,12 @@
 from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS
-from layout_planner import AILayoutPlanner
 import os
 import json
+
+try:
+    from .layout_planner import AILayoutPlanner
+except ImportError:
+    from layout_planner import AILayoutPlanner
 
 FRONTEND_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'frontend'))
 app = Flask(__name__, template_folder=FRONTEND_DIR, static_folder=FRONTEND_DIR)
