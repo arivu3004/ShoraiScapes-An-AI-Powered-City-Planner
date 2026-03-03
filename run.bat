@@ -2,7 +2,7 @@
 REM AI Layout Planner - Startup Script for Windows
 
 echo ========================================
-echo   AI Layout Planner - Setup & Run
+echo   AI Layout Planner - Setup ^& Run
 echo ========================================
 echo.
 
