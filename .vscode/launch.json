@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run Project1 in Edge",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/backend/app.py",
+      "cwd": "${workspaceFolder}/backend",
+      "console": "internalConsole",
+      "justMyCode": true,
+      "serverReadyAction": {
+        "action": "debugWithEdge",
+        "pattern": "Running on (https?://\\S+)",
+        "uriFormat": "http://127.0.0.1:5000"
+      }
+    }
+  ]
+}
